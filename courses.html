@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Mohamed Maher</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Mohamed Maher</h2>
+                <span>Engineer & Educator</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="courses-hero-content">
+                <h1>Engineering & Mathematics Courses</h1>
+                <p>Comprehensive educational programs designed to empower students and professionals with essential engineering knowledge and mathematical thinking skills.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-label">Students Enrolled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Course Modules</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Course Categories</h2>
+                <p>Choose from our specialized engineering and mathematics programs</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card active" data-category="all">
+                    <div class="category-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h3>All Courses</h3>
+                    <p>View all available courses</p>
+                </div>
+                <div class="category-card" data-category="mathematics">
+                    <div class="category-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Mathematics</h3>
+                    <p>Fundamental mathematical concepts</p>
+                </div>
+                <div class="category-card" data-category="engineering">
+                    <div class="category-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Engineering</h3>
+                    <p>Core engineering principles</p>
+                </div>
+                <div class="category-card" data-category="design">
+                    <div class="category-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Engineering design and CAD</p>
+                </div>
+                <div class="category-card" data-category="professional">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Professional</h3>
+                    <p>Career development skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-grid-section">
+        <div class="container">
+            <div class="courses-grid" id="courses-grid">
+                <!-- Mathematics Courses -->
+                <div class="course-card-detailed" data-category="mathematics">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-square-root-alt"></i>
+                        </div>
+                        <div class="course-badge">Beginner</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Pre-Algebra Fundamentals</h3>
+                        <p>Master the essential mathematical foundations needed for engineering success. This comprehensive course covers basic arithmetic, algebraic expressions, and problem-solving techniques.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 15 hours</span>
+                                <span><i class="fas fa-video"></i> 25 videos</span>
+                                <span><i class="fas fa-users"></i> 500+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (127 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Basic Operations</span>
+                            <span class="topic">Fractions</span>
+                            <span class="topic">Decimals</span>
+                            <span class="topic">Percentages</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card-detailed" data-category="mathematics">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-function"></i>
+                        </div>
+                        <div class="course-badge">Intermediate</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Algebra I - Linear Equations</h3>
+                        <p>Develop strong algebraic skills with comprehensive coverage of linear equations, graphing, and real-world applications essential for engineering students.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 20 hours</span>
+                                <span><i class="fas fa-video"></i> 35 videos</span>
+                                <span><i class="fas fa-users"></i> 400+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (95 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Linear Equations</span>
+                            <span class="topic">Graphing</span>
+                            <span class="topic">Systems</span>
+                            <span class="topic">Inequalities</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card-detailed" data-category="mathematics">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="course-badge">Advanced</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Algebra II - Advanced Topics</h3>
+                        <p>Advanced algebraic concepts including quadratic functions, polynomials, and complex numbers with applications in engineering problem-solving.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 25 hours</span>
+                                <span><i class="fas fa-video"></i> 40 videos</span>
+                                <span><i class="fas fa-users"></i> 300+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (78 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Quadratics</span>
+                            <span class="topic">Polynomials</span>
+                            <span class="topic">Exponentials</span>
+                            <span class="topic">Logarithms</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Courses -->
+                <div class="course-card-detailed" data-category="engineering">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="course-badge">Beginner</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Mechanical Engineering Fundamentals</h3>
+                        <p>Introduction to mechanical engineering principles including statics, dynamics, and material properties with practical applications and real-world examples.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 30 hours</span>
+                                <span><i class="fas fa-video"></i> 45 videos</span>
+                                <span><i class="fas fa-users"></i> 350+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (112 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Statics</span>
+                            <span class="topic">Dynamics</span>
+                            <span class="topic">Materials</span>
+                            <span class="topic">Thermodynamics</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card-detailed" data-category="engineering">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="course-badge">Intermediate</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Engineering Physics</h3>
+                        <p>Essential physics concepts for engineers including mechanics, electricity, magnetism, and wave phenomena with engineering applications.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 35 hours</span>
+                                <span><i class="fas fa-video"></i> 50 videos</span>
+                                <span><i class="fas fa-users"></i> 280+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.7 (89 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Mechanics</span>
+                            <span class="topic">Electricity</span>
+                            <span class="topic">Magnetism</span>
+                            <span class="topic">Waves</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Courses -->
+                <div class="course-card-detailed" data-category="design">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <div class="course-badge">Beginner</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Engineering Design Principles</h3>
+                        <p>Learn modern engineering design methodologies, CAD fundamentals, and design thinking processes used in professional engineering practice.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 28 hours</span>
+                                <span><i class="fas fa-video"></i> 38 videos</span>
+                                <span><i class="fas fa-users"></i> 220+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (67 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">CAD Basics</span>
+                            <span class="topic">Design Process</span>
+                            <span class="topic">Sketching</span>
+                            <span class="topic">3D Modeling</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Development -->
+                <div class="course-card-detailed" data-category="professional">
+                    <div class="course-thumbnail">
+                        <div class="course-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="course-badge">All Levels</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Professional Development for Engineers</h3>
+                        <p>Essential soft skills, project management, and career advancement strategies for engineering professionals in today's competitive market.</p>
+                        <div class="course-details">
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 18 hours</span>
+                                <span><i class="fas fa-video"></i> 28 videos</span>
+                                <span><i class="fas fa-users"></i> 450+ students</span>
+                            </div>
+                            <div class="course-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (134 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="course-topics">
+                            <span class="topic">Communication</span>
+                            <span class="topic">Leadership</span>
+                            <span class="topic">Project Management</span>
+                            <span class="topic">Career Planning</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                            <a href="#" class="btn btn-secondary">Preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recommended Learning Path</h2>
+                <p>Follow our structured approach to master engineering fundamentals</p>
+            </div>
+            <div class="path-timeline">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Mathematics Foundation</h3>
+                        <p>Start with Pre-Algebra and Algebra I to build strong mathematical foundations</p>
+                        <div class="step-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Advanced Mathematics</h3>
+                        <p>Progress to Algebra II and advanced mathematical concepts</p>
+                        <div class="step-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Engineering Fundamentals</h3>
+                        <p>Apply mathematical knowledge to engineering physics and mechanics</p>
+                        <div class="step-duration">Duration: 10-12 weeks</div>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Design & Professional Skills</h3>
+                        <p>Learn design principles and develop professional engineering skills</p>
+                        <div class="step-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Integration -->
+    <section class="youtube-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learn on YouTube</h2>
+                <p>Access free educational content and course previews on my YouTube channel</p>
+            </div>
+            <div class="youtube-content">
+                <div class="youtube-info">
+                    <div class="youtube-stats">
+                        <div class="stat">
+                            <i class="fab fa-youtube"></i>
+                            <div>
+                                <span class="stat-number">5000+</span>
+                                <span class="stat-label">Subscribers</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-play"></i>
+                            <div>
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Videos</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <span class="stat-number">500K+</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="youtube-cta">
+                        <h3>Subscribe for Free Content</h3>
+                        <p>Get access to free tutorials, course previews, and educational content updated regularly.</p>
+                        <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-youtube"></i>
+                            Subscribe Now
+                        </a>
+                    </div>
+                </div>
+                <div class="youtube-preview">
+                    <div class="video-placeholder">
+                        <i class="fab fa-youtube"></i>
+                        <p>Latest Video Preview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohamed Maher</h3>
+                    <p>Professional Engineer & Passionate Educator dedicated to empowering the next generation of engineers.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@MohamedMaher22" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohamed Maher. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="courses.js"></script>
+</body>
+</html>
