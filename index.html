@@ -3,392 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Maher - Mathematical Thinking & Engineering Education</title>
-    <meta name="description" content="Academic educator specializing in mathematical thinking and engineering applications. Delivering inspiring and unique learning experiences for students and engineers.">
-    <meta name="keywords" content="mathematical thinking, engineering education, Mohamed Maher, mathematics, algebra, geometry, probability">
-    
-    <!-- External Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    
-    <!-- Custom Styles -->
-    <style>
-        :root {
-            --primary-color: #1e40af;
-            --secondary-color: #0891b2;
-            --accent-color: #f97316;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --background-light: #f8fafc;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-        }
-
-        .hero-bg {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.9) 0%, rgba(8, 145, 178, 0.8) 100%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .nav-sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .math-pattern {
-            position: absolute;
-            opacity: 0.1;
-            font-size: 2rem;
-            color: var(--primary-color);
-            pointer-events: none;
-        }
-
-        .youtube-embed {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-        }
-
-        .youtube-embed iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu {
-                display: block;
-            }
-            
-            .desktop-menu {
-                display: none;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-padding {
-                padding: 60px 0;
-            }
-        }
-
-        .animate-fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-delay-1 { animation-delay: 0.2s; }
-        .animate-delay-2 { animation-delay: 0.4s; }
-        .animate-delay-3 { animation-delay: 0.6s; }
-    </style>
+    <title>Mohamed Maher - Engineer & Educator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav-sticky shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-calculator text-white text-lg"></i>
-                    </div>
-                    <span class="text-xl font-bold text-gradient">Mohamed Maher</span>
-                </div>
-                
-                <div class="desktop-menu hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
-                    <a href="#courses" class="text-gray-700 hover:text-blue-600 transition-colors">Courses</a>
-                    <a href="#blog" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                </div>
-                
-                <div class="mobile-menu md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Mohamed Maher</h2>
+                <span>Engineer & Educator</span>
             </div>
-            
-            <div id="mobile-menu-items" class="md:hidden hidden mt-4 pb-4">
-                <div class="flex flex-col space-y-3">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
-                    <a href="#courses" class="text-gray-700 hover:text-blue-600 transition-colors">Courses</a>
-                    <a href="#blog" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
-        <!-- Mathematical patterns -->
-        <div class="math-pattern" style="top: 10%; left: 10%;">∑</div>
-        <div class="math-pattern" style="top: 20%; right: 15%;">∫</div>
-        <div class="math-pattern" style="bottom: 30%; left: 5%;">π</div>
-        <div class="math-pattern" style="bottom: 15%; right: 10%;">∆</div>
-        <div class="math-pattern" style="top: 50%; left: 80%;">∞</div>
-        
-        <div class="container mx-auto px-6 hero-content">
-            <div class="max-w-4xl mx-auto text-center text-white">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-                    Inspiring Mathematical
-                    <span class="text-orange-400">Thinking</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in animate-delay-1">
-                    Academic educator specializing in mathematical thinking and engineering applications, 
-                    delivering unique learning experiences for students and engineers.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-2">
-                    <button onclick="scrollToSection('courses')" class="btn-primary">
-                        <i class="fas fa-play"></i>
-                        Explore Courses
-                    </button>
-                    <button onclick="scrollToSection('about')" class="btn-secondary bg-white text-blue-600 hover:bg-gray-100">
-                        <i class="fas fa-user"></i>
-                        Learn More
-                    </button>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Mohamed Maher</h1>
+                <h2>Professional Engineer & Passionate Educator</h2>
+                <p>Empowering students and professionals through comprehensive engineering education and innovative teaching methods</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">View Courses</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Courses</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">About Mohamed Maher</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Passionate educator and researcher dedicated to making mathematical thinking accessible and inspiring for all learners.
-                </p>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Professional Engineer and Dedicated Educator</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Educational Philosophy</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Inspired by Keith Devlin's "Introduction to Mathematical Thinking," I believe that mathematics is not just about computation, but about developing logical reasoning, problem-solving skills, and creative thinking that applies to all areas of life.
-                        </p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Engineering Excellence & Educational Innovation</h3>
+                    <p>As a professional engineer and passionate educator, I am dedicated to bridging the gap between theoretical knowledge and practical application. My mission is to empower students and professionals with the skills and knowledge needed to excel in their engineering careers.</p>
+                    
+                    <div class="expertise-areas">
+                        <h4>Areas of Expertise</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Mechanical Engineering</li>
+                            <li><i class="fas fa-check"></i> Mathematics & Engineering Fundamentals</li>
+                            <li><i class="fas fa-check"></i> Educational Technology</li>
+                            <li><i class="fas fa-check"></i> Professional Development</li>
+                            <li><i class="fas fa-check"></i> Technical Training</li>
+                        </ul>
                     </div>
                     
-                    <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Mission</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            To bridge the gap between theoretical mathematics and practical engineering applications, making complex concepts accessible through innovative teaching methods and real-world examples.
-                        </p>
-                    </div>
-                    
-                    <div class="flex items-center justify-center">
-                        <a href="#" class="btn-primary">
-                            <i class="fas fa-download"></i>
-                            Download CV
-                        </a>
+                    <div class="achievements">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li><i class="fas fa-award"></i> Established comprehensive engineering education platform</li>
+                            <li><i class="fas fa-award"></i> Developed innovative teaching methodologies</li>
+                            <li><i class="fas fa-award"></i> Mentored hundreds of engineering students</li>
+                            <li><i class="fas fa-award"></i> Created industry-relevant curriculum</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="space-y-6">
-                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                        <h4 class="text-xl font-bold mb-3 text-gray-800">Education</h4>
-                        <div class="space-y-3">
-                            <div class="border-l-4 border-blue-500 pl-4">
-                                <h5 class="font-semibold">PhD in Mathematical Education</h5>
-                                <p class="text-gray-600">University Name • 2020</p>
-                            </div>
-                            <div class="border-l-4 border-cyan-500 pl-4">
-                                <h5 class="font-semibold">MSc in Applied Mathematics</h5>
-                                <p class="text-gray-600">University Name • 2016</p>
-                            </div>
-                            <div class="border-l-4 border-orange-500 pl-4">
-                                <h5 class="font-semibold">BSc in Engineering Mathematics</h5>
-                                <p class="text-gray-600">University Name • 2014</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-                        <h4 class="text-xl font-bold mb-3 text-gray-800">Experience</h4>
-                        <div class="space-y-3">
-                            <div class="border-l-4 border-green-500 pl-4">
-                                <h5 class="font-semibold">Senior Mathematics Educator</h5>
-                                <p class="text-gray-600">Educational Institution • 2020 - Present</p>
-                            </div>
-                            <div class="border-l-4 border-purple-500 pl-4">
-                                <h5 class="font-semibold">YouTube Content Creator</h5>
-                                <p class="text-gray-600">@MohamedMaher22 • 2018 - Present</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section-padding bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Portfolio</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Explore my academic and professional work in mathematical education and engineering applications.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                        <i class="fas fa-file-alt text-white text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Research Paper 1</h3>
-                        <p class="text-gray-600 mb-4">
-                            "Innovative Approaches to Teaching Mathematical Thinking in Engineering Education"
-                        </p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">
-                            Read More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
-                        <i class="fas fa-project-diagram text-white text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Engineering Project</h3>
-                        <p class="text-gray-600 mb-4">
-                            "Mathematical Modeling for Structural Analysis and Optimization"
-                        </p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">
-                            View Project <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
-                        <i class="fas fa-book text-white text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Educational Resource</h3>
-                        <p class="text-gray-600 mb-4">
-                            "Interactive Mathematics Workbook for Engineering Students"
-                        </p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">
-                            Download <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                 </div>
             </div>
@@ -396,288 +121,118 @@
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Courses & Learning</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Comprehensive courses designed to develop mathematical thinking and engineering problem-solving skills.
-                </p>
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <p>Comprehensive engineering education for all levels</p>
             </div>
-            
-            <!-- Course Categories -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button onclick="filterCourses('all')" class="btn-primary filter-btn active" data-filter="all">All Courses</button>
-                <button onclick="filterCourses('mathematical-thinking')" class="btn-secondary filter-btn" data-filter="mathematical-thinking">Mathematical Thinking</button>
-                <button onclick="filterCourses('algebra')" class="btn-secondary filter-btn" data-filter="algebra">Algebra</button>
-                <button onclick="filterCourses('geometry')" class="btn-secondary filter-btn" data-filter="geometry">Geometry</button>
-                <button onclick="filterCourses('probability')" class="btn-secondary filter-btn" data-filter="probability">Probability</button>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
-                <!-- Course 1 -->
-                <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-category="mathematical-thinking">
-                    <div class="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="Introduction to Mathematical Thinking" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-calculator"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Introduction to Mathematical Thinking</h3>
-                        <p class="text-gray-600 mb-4">
-                            Learn the fundamental principles of mathematical reasoning and problem-solving.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">12 lectures • 8 hours</span>
-                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                        </div>
+                    <h3>Engineering Mathematics</h3>
+                    <p>Master the fundamental mathematical concepts essential for engineering success</p>
+                    <div class="course-features">
+                        <span><i class="fas fa-clock"></i> 40+ Hours</span>
+                        <span><i class="fas fa-users"></i> 500+ Students</span>
                     </div>
+                    <a href="#" class="course-btn">Learn More</a>
                 </div>
                 
-                <!-- Course 2 -->
-                <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-category="algebra">
-                    <div class="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="Advanced Algebra for Engineers" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-cog"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Advanced Algebra for Engineers</h3>
-                        <p class="text-gray-600 mb-4">
-                            Master algebraic concepts essential for engineering applications.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">15 lectures • 10 hours</span>
-                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                        </div>
+                    <h3>Mechanical Engineering Fundamentals</h3>
+                    <p>Comprehensive introduction to mechanical engineering principles and applications</p>
+                    <div class="course-features">
+                        <span><i class="fas fa-clock"></i> 60+ Hours</span>
+                        <span><i class="fas fa-users"></i> 300+ Students</span>
                     </div>
+                    <a href="#" class="course-btn">Learn More</a>
                 </div>
                 
-                <!-- Course 3 -->
-                <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-category="geometry">
-                    <div class="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="Geometric Thinking in Engineering" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-drafting-compass"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Geometric Thinking in Engineering</h3>
-                        <p class="text-gray-600 mb-4">
-                            Explore geometric principles and their applications in engineering design.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">10 lectures • 6 hours</span>
-                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                        </div>
+                    <h3>Engineering Design</h3>
+                    <p>Learn modern engineering design principles and CAD applications</p>
+                    <div class="course-features">
+                        <span><i class="fas fa-clock"></i> 35+ Hours</span>
+                        <span><i class="fas fa-users"></i> 250+ Students</span>
                     </div>
+                    <a href="#" class="course-btn">Learn More</a>
                 </div>
                 
-                <!-- Course 4 -->
-                <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-category="probability">
-                    <div class="youtube-embed">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="Probability and Statistics for Engineers" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Probability and Statistics for Engineers</h3>
-                        <p class="text-gray-600 mb-4">
-                            Understanding uncertainty and data analysis in engineering contexts.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">18 lectures • 12 hours</span>
-                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                <i class="fab fa-youtube text-xl"></i>
-                            </a>
-                        </div>
+                    <h3>Professional Development</h3>
+                    <p>Essential skills for career advancement in engineering fields</p>
+                    <div class="course-features">
+                        <span><i class="fas fa-clock"></i> 25+ Hours</span>
+                        <span><i class="fas fa-users"></i> 400+ Students</span>
                     </div>
+                    <a href="#" class="course-btn">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- YouTube Integration Section -->
-    <section class="section-padding bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Latest from YouTube</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Stay updated with my latest educational content and mathematical insights.
-                </p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Innovative solutions and educational initiatives</p>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-                    <div class="mb-6">
-                        <i class="fab fa-youtube text-6xl text-red-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-2">Subscribe to My Channel</h3>
-                        <p class="text-gray-600">
-                            Join thousands of students learning mathematical thinking and engineering applications.
-                        </p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="btn-primary">
-                            <i class="fab fa-youtube"></i>
-                            Subscribe Now
-                        </a>
-                        <div class="flex items-center gap-4 text-gray-600">
-                            <span><i class="fas fa-users mr-2"></i>10K+ Subscribers</span>
-                            <span><i class="fas fa-play mr-2"></i>500+ Videos</span>
+                    <div class="project-content">
+                        <h3>Engineering Education Platform</h3>
+                        <p>Comprehensive online learning platform for engineering students with interactive content and practical exercises.</p>
+                        <div class="project-tags">
+                            <span>Education</span>
+                            <span>Technology</span>
+                            <span>Engineering</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Blog & Insights</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Thoughts on mathematical thinking, philosophy, and engineering education.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                        <i class="fas fa-brain text-white text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">The Philosophy of Mathematical Thinking</h3>
-                        <p class="text-gray-600 mb-4">
-                            Exploring the deeper meaning behind mathematical reasoning and its connection to philosophical inquiry.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">March 15, 2024</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Read More</a>
-                        </div>
-                    </div>
-                </article>
                 
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
-                        <i class="fas fa-cogs text-white text-4xl"></i>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-book"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Engineering Applications of Abstract Mathematics</h3>
-                        <p class="text-gray-600 mb-4">
-                            How seemingly abstract mathematical concepts find practical applications in engineering design.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">March 10, 2024</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Read More</a>
+                    <div class="project-content">
+                        <h3>Digital Learning Resources</h3>
+                        <p>Development of comprehensive digital resources and materials for engineering education.</p>
+                        <div class="project-tags">
+                            <span>Content Creation</span>
+                            <span>Digital Media</span>
+                            <span>Education</span>
                         </div>
-                    </div>
-                </article>
-                
-                <article class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
-                        <i class="fas fa-lightbulb text-white text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Innovative Teaching Methods in Mathematics</h3>
-                        <p class="text-gray-600 mb-4">
-                            Exploring new approaches to make mathematical concepts more accessible and engaging for students.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">March 5, 2024</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Read More</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Tools Section -->
-    <section class="section-padding bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Interactive Learning Tools</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Engage with mathematics through interactive visualizations and tools.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-2">GeoGebra Visualizations</h3>
-                        <p class="text-gray-600">
-                            Interactive mathematical visualizations to explore geometric patterns and algebraic relationships.
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <button class="btn-primary" onclick="openGeoGebra()">
-                            <i class="fas fa-play"></i>
-                            Launch GeoGebra
-                        </button>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
-                    <div class="text-center mb-6">
-                        <i class="fab fa-python text-4xl text-green-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-2">Python Calculator</h3>
-                        <p class="text-gray-600">
-                            A simple Python-based calculator for mathematical computations and learning programming concepts.
-                        </p>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="text-center">
-                        <button class="btn-primary" onclick="openPythonCalculator()">
-                            <i class="fas fa-calculator"></i>
-                            Open Calculator
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="section-padding bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center text-white">
-                <h2 class="text-4xl font-bold mb-4">Stay Updated</h2>
-                <p class="text-xl mb-8">
-                    Subscribe to my newsletter for the latest courses, insights, and mathematical discoveries.
-                </p>
-                
-                <div class="max-w-md mx-auto">
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <input 
-                            type="email" 
-                            placeholder="Enter your email" 
-                            class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                            id="newsletter-email"
-                        >
-                        <button onclick="subscribeNewsletter()" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">
-                            <i class="fas fa-paper-plane"></i>
-                            Subscribe
-                        </button>
+                    <div class="project-content">
+                        <h3>Student Mentorship Program</h3>
+                        <p>Structured mentorship program helping engineering students achieve their career goals.</p>
+                        <div class="project-tags">
+                            <span>Mentorship</span>
+                            <span>Career Development</span>
+                            <span>Student Support</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -685,94 +240,69 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4 text-gradient">Get In Touch</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Ready to start your mathematical journey? Let's connect and explore the possibilities.
-                </p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Let's connect and discuss opportunities</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-envelope text-blue-600 text-xl"></i>
-                        </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <h4 class="font-bold text-lg">Email</h4>
-                            <p class="text-gray-600">mohamed.maher@example.com</p>
+                            <h4>Email</h4>
+                            <p>contact@mohamedmaher.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+20 XXX XXX XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Egypt</p>
                         </div>
                     </div>
                     
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fab fa-linkedin text-blue-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                linkedin.com/in/mohamedmaher22
+                    <div class="social-links-contact">
+                        <h4>Follow Me</h4>
+                        <div class="social-icons">
+                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank">
+                                <i class="fab fa-youtube"></i>
                             </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <i class="fab fa-facebook text-blue-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Facebook</h4>
-                            <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank" class="text-blue-600 hover:text-blue-800">
-                                facebook.com/mhmd.mahr.145589
+                            <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
                             </a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                            <i class="fab fa-youtube text-red-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">YouTube</h4>
-                            <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-red-600 hover:text-red-800">
-                                @MohamedMaher22
+                            <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank">
+                                <i class="fab fa-facebook"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-8">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
                         </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
                         </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
                         </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn-primary w-full justify-center">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -780,170 +310,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-calculator text-white text-lg"></i>
-                        </div>
-                        <span class="text-xl font-bold">Mohamed Maher</span>
-                    </div>
-                    <p class="text-gray-400">
-                        Inspiring mathematical thinking and engineering excellence through innovative education.
-                    </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohamed Maher</h3>
+                    <p>Professional Engineer & Passionate Educator dedicated to empowering the next generation of engineers.</p>
                 </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#courses" class="hover:text-white transition-colors">Courses</a></li>
-                        <li><a href="#blog" class="hover:text-white transition-colors">Blog</a></li>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Course Materials</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Practice Problems</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Video Lectures</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Research Papers</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.youtube.com/@MohamedMaher22" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors">
-                            <i class="fab fa-youtube text-2xl"></i>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@MohamedMaher22" target="_blank">
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
+                        <a href="https://www.linkedin.com/in/mohamedmaher22/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors">
-                            <i class="fab fa-facebook text-2xl"></i>
+                        <a href="https://web.facebook.com/mhmd.mahr.145589" target="_blank">
+                            <i class="fab fa-facebook"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Mohamed Maher. All rights reserved. Built with passion for mathematical education.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohamed Maher. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu-items');
-            menu.classList.toggle('hidden');
-        }
-
-        // Smooth scrolling
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Course filtering
-        function filterCourses(category) {
-            const courses = document.querySelectorAll('.course-card');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Update button states
-            buttons.forEach(btn => {
-                btn.classList.remove('btn-primary', 'active');
-                btn.classList.add('btn-secondary');
-            });
-            
-            const activeBtn = document.querySelector(`[data-filter="${category}"]`);
-            activeBtn.classList.remove('btn-secondary');
-            activeBtn.classList.add('btn-primary', 'active');
-            
-            // Filter courses
-            courses.forEach(course => {
-                if (category === 'all' || course.dataset.category === category) {
-                    course.style.display = 'block';
-                } else {
-                    course.style.display = 'none';
-                }
-            });
-        }
-
-        // Newsletter subscription
-        function subscribeNewsletter() {
-            const email = document.getElementById('newsletter-email').value;
-            if (email) {
-                alert('Thank you for subscribing! You will receive updates about new courses and content.');
-                document.getElementById('newsletter-email').value = '';
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        }
-
-        // Contact form submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-
-        // Interactive tools
-        function openGeoGebra() {
-            window.open('https://www.geogebra.org/calculator', '_blank');
-        }
-
-        function openPythonCalculator() {
-            // Simple Python calculator modal
-            const calculation = prompt('Enter a mathematical expression (e.g., 2 + 3 * 4):');
-            if (calculation) {
-                try {
-                    const result = eval(calculation);
-                    alert(`Result: ${result}`);
-                } catch (error) {
-                    alert('Invalid expression. Please try again.');
-                }
-            }
-        }
-
-        // Scroll animations
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-fade-in');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('animate-fade-in');
-                }
-            });
-        }
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.nav-sticky');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.backdropFilter = 'blur(15px)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            }
-            
-            animateOnScroll();
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            animateOnScroll();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
